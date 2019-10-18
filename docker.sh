@@ -13,18 +13,24 @@ RUN dpkg --add-architecture armhf \
         binutils-arm-linux-gnueabihf \
         curl \
         file \
+        gcc \
         gdb \
+        git \
         iproute2 \
         iptables \
         less \
         libasound2-dev:armhf \
         libaudio-dev:armhf \
+        libicu-dev:armhf \
         libstdc++-6-dev:armhf \
-        libx11-6 \
+        libx11-dev \
         libx11-dev:armhf \
         libxml2-dev:armhf \
+        libz-dev \
         openjdk-8-jre \
+        python-pip \
         rsync \
+        ruby-dev \
         vim \
         wget
 
