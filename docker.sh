@@ -47,7 +47,7 @@ RUN cd /tmp \
     && tar xvf ./twilio-llvm-linux-0.1-linux.tar.bz2 -C /opt/twilio \
     && bash -c 'ln -sf /opt/twilio/llvm-linux/bin/{clang,clang++,ld.lld,lld,lld-link,llvm-ar,llvm-symbolizer,sancov} /usr/bin/'
 
-`git ls-tree HEAD | cut -f 2 | sort | sed '/docker.sh/d' | while read source; do echo COPY $source $source; done`
+COPY qemu-arm /usr/bin/
 
 WORKDIR /opt/twilio
 
@@ -58,4 +58,4 @@ REVISION=`git rev-parse HEAD``git diff-index --quiet HEAD -- || echo '-dirty'`
 
 set +u
 
-docker build --file $DOCKERFILE --tag dmorilha/twilio-video-sdk-toolchain:$REVISION --tag dmorilha/twilio-video-sdk-toolchain:latest .
+docker build --file $DOCKERFILE --tag twilio/twilio-video-sdk-toolchain:$REVISION --tag twilio/twilio-video-sdk-toolchain:latest .
