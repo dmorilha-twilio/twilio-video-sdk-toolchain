@@ -12,8 +12,11 @@ RUN dpkg --add-architecture armhf \
     && apt -y install \
         binutils-arm-linux-gnueabihf \
         curl \
+        ffmpeg \
         file \
+        g++-arm-linux-gnueabihf \
         gcc \
+        gcc-arm-linux-gnueabihf \
         gdb \
         git \
         iproute2 \
@@ -21,13 +24,22 @@ RUN dpkg --add-architecture armhf \
         less \
         libasound2-dev:armhf \
         libaudio-dev:armhf \
-        libicu-dev:armhf \
+        libgtk2.0-dev \
+        libpulse-dev \
         libstdc++-6-dev:armhf \
         libx11-dev \
         libx11-dev:armhf \
-        libxml2-dev:armhf \
+        libxcomposite-dev \
+        libxcomposite-dev:armhf \
+        libxext-dev \
+        libxext-dev:armhf \
+        libxml2-dev \
+        libxml2:armhf \
+        libxrender-dev \
+        libxrender-dev:armhf \
         libz-dev \
         openjdk-8-jre \
+        pkg-config \
         python-pip \
         rsync \
         ruby-dev \
